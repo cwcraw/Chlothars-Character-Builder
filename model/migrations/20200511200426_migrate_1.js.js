@@ -4,26 +4,30 @@ exports.up = function(knex, Promise) {
     t.increments()
       .index();;
 
-    t.string("Name")
+    t.string("name")
       .notNullable()
       .index()
 
-    t.integer("Str")
+    t.string("race")
+      .notNullable()
+      .index()
+
+    t.integer("str")
       .notNullable()
 
-    t.integer("Dex")
+    t.integer("dex")
       .notNullable()
     
-    t.integer("Con")
+    t.integer("con")
       .notNullable()
 
-    t.integer("Int")
+    t.integer("int")
       .notNullable()
     
-    t.integer("Wis")
+    t.integer("wis")
       .notNullable()
 
-    t.integer("Cha")
+    t.integer("cha")
       .notNullable()
     
   })

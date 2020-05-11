@@ -8,9 +8,9 @@ exports.seed = function(knex) {
     .then(function () {
       // Inserts seed entries
       return knex('char_list').insert([
-        {id: 1, Name: 'Chlothar', Str:'1', Dex:'2',Con: '3', Int: '4',Wis:'5',Cha:'6'},
-        {id: 2, Name: 'Ashbor', Str:'2', Dex:'3',Con: '4', Int: '5',Wis:'6',Cha:'7'},
-        {id: 3, Name: 'Tuoba', Str:'2', Dex:'2',Con: '3', Int: '3',Wis:'2',Cha:'1'},
+        {id: 1, name: 'Chlothar', race: 'Dwarf', str:'1', dex:'2',con: '3', int: '4',wis:'5',cha:'6'},
+        {id: 2, name: 'Ashbor', race: 'Gnome', str:'2', dex:'3',con: '4', int: '5',wis:'6',cha:'7'},
+        {id: 3, name: 'Tuoba', race: 'Human', str:'2', dex:'2',con: '3', int: '3',wis:'2',cha:'1'},
 
       ]);
     });
