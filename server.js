@@ -1,11 +1,8 @@
-const express = require("express");
-const path = require("path");
+const {typeDefs, resolvers} = require('./server/schema.js');
+const { ApolloServer } = require('apollo-server');
 
-const app = express();
-app.use(express.static(path.resolve(__dirname, "dist")));
+const server = new ApolloServer({ typeDefs, resolvers });
 
-const port = process.env.PORT || 3000;
-app.listen(port, () => {
-  // eslint-disable-next-line
-  console.log(`Server up and listening on port ${port}`);
+server.listen().then(({ url }) => {
+  console.log(`🚀 Server ready at ${url}`)
 });
