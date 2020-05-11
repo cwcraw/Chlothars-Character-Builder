@@ -1,8 +1,8 @@
 <template>
   <div id="app">
     <Header/>
-    <characterDisplay/>
-    <characterInput/>
+    <characterInput  v-on:submit="submit"/>
+    <characterDisplay v-bind:char_sheet='this.char_sheet'/>
   </div>
 </template>
 
@@ -13,11 +13,24 @@ import Header from './components/Header.vue'
 
 export default {
   name: 'App',
+   data() {
+    return {
+      char_sheet: {},
+    };
+  },
   components: {
     characterInput,
     characterDisplay,
     Header
-  }
+  },
+  methods: {
+  submit: function (char_name) {
+    this.char_sheet = {
+      name: char_name
+    }
+    console.log(this.char_sheet)
+    }
+  },
 }
 </script>
 
