@@ -5,7 +5,9 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "migrate": "knex migrate:latest --knexfile ./model/knexfile.js",
+    "newMigration": "knex migrate:make migrate_1.js --migrations-directory ./model/migrations"
   },
   "dependencies": {
     "apollo-boost": "^0.4.8",
@@ -14,6 +16,7 @@
     "graphql": "^15.0.0",
     "knex": "^0.21.1",
     "nodemon": "^2.0.3",
+    "pg": "^8.1.0",
     "vue": "^2.6.11",
     "vue-apollo": "^3.0.3"
   },

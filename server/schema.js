@@ -34,7 +34,7 @@ const charsTest =
       "con": 8,
       "int": 8,
       "wis": 8,
-      "char": 8
+      "cha": 8
     },
     {
       "name": "Ashbor",
@@ -43,7 +43,7 @@ const charsTest =
       "con": 8,
       "int": 8,
       "wis": 8,
-      "char": 8
+      "cha": 8
     },
     {
       "name": "Tuoba",
@@ -52,7 +52,7 @@ const charsTest =
       "con": 8,
       "int": 8,
       "wis": 8,
-      "char": 8
+      "cha": 8
     }
   ]
 
