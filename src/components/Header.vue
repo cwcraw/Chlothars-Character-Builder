@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>Welcome to Chlothar's Chracter Creator</h1>
+    <h1>Welcome to Chlothar's Character Creator</h1>
   </div>
 </template>
 
