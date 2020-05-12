@@ -31,40 +31,9 @@ const resolvers = {
       console.log("output from Query", output)
       return output
     }
+  
   },
 };
-
-// const charsTest = 
-// [
-//     {
-//       "name": "Chlothar",
-//       "str": 8,
-//       "dex": 8,
-//       "con": 8,
-//       "int": 8,
-//       "wis": 8,
-//       "cha": 8
-//     },
-//     {
-//       "name": "Ashbor",
-//       "str": 8,
-//       "dex": 8,
-//       "con": 8,
-//       "int": 8,
-//       "wis": 8,
-//       "cha": 8
-//     },
-//     {
-//       "name": "Tuoba",
-//       "str": 8,
-//       "dex": 8,
-//       "con": 8,
-//       "int": 8,
-//       "wis": 8,
-//       "cha": 8
-//     }
-//   ]
-
 
 
 module.exports = {typeDefs, resolvers};

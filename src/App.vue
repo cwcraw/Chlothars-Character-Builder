@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <Header/>
-    <select class="state" v-model="char">
+    <select class="char" v-model="char">
         <option value disabled>Returning</option>
         <option v-for="char in CharSheets" :key="char.name">
           {{ char.name }}
@@ -40,9 +40,16 @@ export default {
     Header
   },
   methods: {
-  submit: function (char_name) {
+  submit: function (char_name, char_race,char_str,char_dex,char_con,char_int,char_wis,char_cha) {
     this.char_sheet = {
-      name: char_name
+      name: char_name,
+      race: char_race,
+      str: char_str,
+      dex: char_dex,
+      con: char_con,
+      int: char_int,
+      wis: char_wis,
+      cha: char_cha,
     }
     console.log(this.char_sheet)
     }
