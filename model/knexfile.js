@@ -1,11 +1,11 @@
 // Update with your config settings.
-const config = require("../config");
 require("dotenv").config();
-
+const config = require("../config");
 
 module.exports = {
   client: "pg",
-  connection: config.db.connection,
+  connection:  process.env.DATABASE_URL ||
+  `postgres://${process.env.USER}:${process.env.PASSWORD}@127.0.0.1:5432/charlist`
     pool: {
     min: 2,
     max: 10

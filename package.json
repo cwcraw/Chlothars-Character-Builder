@@ -8,7 +8,8 @@
     "lint": "vue-cli-service lint",
     "migrate": "knex migrate:latest --knexfile ./model/knexfile.js",
     "newMigration": "knex migrate:make migrate_1.js --migrations-directory ./model/migrations",
-    "seed": "yarn knex seed:run --knexfile=./model/knexfile.js"
+    "seed": "yarn knex seed:run --knexfile=./model/knexfile.js",
+    "dbServer": "yarn nodemon ./server.js"
   },
   "dependencies": {
     "apollo-boost": "^0.4.8",
