@@ -1,5 +1,7 @@
 // Update with your config settings.
 const config = require("../config");
+require("dotenv").config();
+
 
 module.exports = {
   client: "pg",
