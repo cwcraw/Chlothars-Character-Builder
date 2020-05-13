@@ -1,6 +1,5 @@
 module.exports = knex => {
     return async params => {
-      console.log(params)
       let output = await knex("char_list")
         .where("id", params.id)
         .select()

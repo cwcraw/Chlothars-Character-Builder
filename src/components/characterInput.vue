@@ -141,7 +141,6 @@ export default {
       this.Char_race= ""
     },
     Set_points: function() {
-      console.log(this.setting)
       this.Ability_points=this.Setting_obj[this.setting]
       this.Rem_ability_points=this.Ability_points
     },
@@ -154,7 +153,6 @@ export default {
         output = output-2
       }
       if(this.Char_race === 'Human' && this.Extra_point === "Str") {
-        console.log(this.Extra_point)
         output = output + 2
       }
       this.Char_str = output
@@ -166,7 +164,6 @@ export default {
       if(isNaN(output) ){ output = 0}
       this.Raw_dex = output
       if(this.Char_race === 'Elf'){
-        console.log('Elves')
         output=output+2
       }
       if(this.Char_race === 'Human' && this.Extra_point === "Dex") {
@@ -181,7 +178,6 @@ export default {
       if(isNaN(output) ){ output = 0}
       this.Raw_con = output
       if(this.Char_race === 'Elf'){
-        console.log('Elves')
         output=output-2
       } else if (this.Char_race === 'Dwarf') {
         output = output+2
@@ -200,7 +196,6 @@ export default {
       if(isNaN(output) ){ output = 0}
       this.Raw_int = output
       if(this.Char_race === 'Elf'){
-        console.log('Elves')
         output=output+2
       }
       if(this.Char_race === 'Human' && this.Extra_point === "Int") {
@@ -215,7 +210,6 @@ export default {
       if(isNaN(output) ){ output = 0}
       this.Raw_wis = output
       if(this.Char_race === 'Dwarf'){
-        console.log('Dwarf')
         output=output+2
       }
       if(this.Char_race === 'Human' && this.Extra_point === "Wis") {
@@ -230,7 +224,6 @@ export default {
       if(isNaN(output) ){ output = 0}
       this.Raw_cha = output
       if(this.Char_race === 'Gnome'){
-        console.log('Gnome')
         output=output+2
       } else if (this.Char_race === 'Dwarf') {
         output = output - 2

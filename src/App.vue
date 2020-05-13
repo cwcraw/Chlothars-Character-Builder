@@ -62,17 +62,12 @@ export default {
   },
   methods: {
     prevChar: function () {
-      console.log(this.prevCharVal)
       this.prevCharVal = !this.prevCharVal
     },
     newChar: function () {
-      console.log(this.newCharVal)
       this.newCharVal = !this.newCharVal
     },
-  // GetChar: async function() {
-  //   console.log(this.character, typeof this.character)
-  //   this.char_id = this.character.split('.')[0]
-  // },
+
   Save: async function() {
     if(this.char_name === undefined) {
       await document.getElementById("Display").click()
@@ -95,7 +90,6 @@ export default {
     })
   },
   Delete: async function() {
-    console.log(this.id)
     await this.$apollo.mutate({
       mutation: gql`mutation ($id:ID!) {
         Delete(id:$id) 
@@ -106,7 +100,6 @@ export default {
     })
   },
   Retrieve: async function() {
-    console.log(this.id)
     let result = await this.$apollo.query({
         query: gql`query ($id:ID!) {
           GetChar(id: $id) {
@@ -128,7 +121,6 @@ export default {
       delete result.data.GetChar['__typename']
       delete result.data.GetChar['id']
       this.retrievedChar = result.data.GetChar
-      console.log(this.retrievedChar)
   },
 
   display: function (char_name, char_race,char_str,char_dex,char_con,char_int,char_wis,char_cha) {
@@ -150,7 +142,6 @@ export default {
       wis: char_wis,
       cha: char_cha,
     }
-    console.log(this.char_sheet)
     }
   },
 }

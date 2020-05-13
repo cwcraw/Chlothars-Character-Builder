@@ -34,12 +34,10 @@ const resolvers = {
   Query: {
     CharSheets: async () => {
       let output = await dbOps.list()
-      console.log("output from Query", output)
       return output
     },
     GetChar: async (_,request) => {
       let output = await dbOps.GetChar(request)
-      console.log("output from GetChar", output)
       return output
     }
   },
@@ -47,11 +45,9 @@ const resolvers = {
 
   Mutation: {
     NewCharSheet: async (_,request) => {
-      console.log(request)
       await dbOps.NewCharSheet(request)
     },
     Delete: async (_,request) => {
-      console.log(request)
       await dbOps.Delete(request)
     },
   }
