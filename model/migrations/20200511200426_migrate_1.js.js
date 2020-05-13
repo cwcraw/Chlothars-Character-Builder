@@ -6,11 +6,9 @@ exports.up = function(knex, Promise) {
 
     t.string("name")
       .notNullable()
-      .index()
 
     t.string("race")
       .notNullable()
-      .index()
 
     t.integer("str")
       .notNullable()

@@ -32,6 +32,15 @@
         </option>
       </select>
     </div>
+    <div v-if="this.Char_race==='Gnome'">
+      <p> Gnomes have a +2 bonus to Cha and Con but a -2 penalty to Str.</p>
+    </div>
+    <div v-if="this.Char_race==='Dwarf'">
+      <p> Dwarfs have a +2 bonus to Wis and Con, but a -2 penalty to Cha.  </p>
+    </div>
+    <div v-if="this.Char_race==='Elf'">
+      <p> Elves have a +2 bonus to Int and Dex, but a -2 penalty to Con.  </p>
+    </div>
     </div>
     <div> Character Abilities:
       <br> Strengh Selection    
@@ -77,7 +86,7 @@
       </select>
       Charisma Score: {{Char_cha}} <br>
   </div>
-    <button v-on:click="$emit('submit', Char_name, Char_race, Char_str, Char_dex, Char_con, Char_int, Char_wis, Char_cha)" id="Display"> Display </button> 
+    <button v-on:click="$emit('submit', Char_name, Char_race, Char_str, Char_dex, Char_con, Char_int, Char_wis, Char_cha)" id="Display"> Update Display </button> 
     <button v-on:click="reset"> New Character </button> 
   </div>
 </template>
@@ -87,7 +96,7 @@ export default {
   name: "characterInput",
   data: () => {
     return {
-      RaceList: ["Human","Gnome","Dwarf"],
+      RaceList: ["Human","Gnome","Dwarf","Elf"],
       AblList: ["Str", "Dex", "Con", "Int", "Wis","Cha"],
       Extra_point:"",
       Point_list: [-4,-2,-1,0,1,2,3,5,7,10,13,17],
@@ -141,12 +150,7 @@ export default {
       let output = this.Point_obj[this.Str]
       if(isNaN(output) ){ output = 0}
       this.Raw_str = output
-      console.log(this.Raw_str)
-      if(this.Char_race === 'Dwarf'){
-        console.log('DWARVES')
-        output=output+2
-      } else if (this.Char_race === 'Gnome') {
-        console.log("gnome")
+      if (this.Char_race === 'Gnome') {
         output = output-2
       }
       if(this.Char_race === 'Human' && this.Extra_point === "Str") {
@@ -180,7 +184,9 @@ export default {
         console.log('Elves')
         output=output-2
       } else if (this.Char_race === 'Dwarf') {
-        output = output-2
+        output = output+2
+      } else if (this.Char_race === 'Gnome') {
+        output = output+2
       }
       if(this.Char_race === 'Human' && this.Extra_point === "con") {
         output = output + 2
@@ -238,3 +244,9 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+#Display {
+
+}
+</style>
