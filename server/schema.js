@@ -25,6 +25,7 @@ const typeDefs = gql`
   }
 
   type Mutation {
+    Delete(id:ID!): String,
     NewCharSheet(name:String!,race:String!,str:Int!,dex:Int!,con:Int!,int:Int!,wis:Int!,cha:Int!): CharSheet 
   }
 `;
@@ -48,7 +49,11 @@ const resolvers = {
     NewCharSheet: async (_,request) => {
       console.log(request)
       await dbOps.NewCharSheet(request)
-    }
+    },
+    Delete: async (_,request) => {
+      console.log(request)
+      await dbOps.Delete(request)
+    },
   }
 
 };

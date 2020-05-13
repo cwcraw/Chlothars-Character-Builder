@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>Character Input</h1>
+    <h1>New Character Input</h1>
     <div>
       Character Name:
     <input v-model="Char_name"> 
@@ -246,7 +246,4 @@ export default {
 </script>
 
 <style scoped>
-#Display {
-
-}
 </style>

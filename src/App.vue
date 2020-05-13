@@ -1,20 +1,34 @@
 <template>
   <div id="app">
     <Header/>
-    <select class="char" v-model="character" v-on:change="GetCharQ">
-        <option value disabled>Returning</option>
-        <option v-for="character in CharSheets" :key="character.id">
-          {{character.id}}. {{ character.name }}
+      <button v-on:click="prevChar"> Previous Characters </button> 
+      <button v-on:click="newChar"> New Character </button> 
+    <div v-if="this.prevCharVal">
+      <p>Previous Character list</p>
+      <h5 v-for="character in CharSheets" :key="character.id"> 
+        ID: {{character.id}}, Name: {{character.name}}
+      </h5>
+      <p> Please select the character ID below </p>
+      <select v-model="id">
+        <option v-for="id in CharSheets" :key="id.id">
+          {{id.id}}
         </option>
-      </select>
-    <characterInput  v-on:submit="display" id = "charInput"/>
-    <characterDisplay v-bind:char_sheet='this.char_sheet'/>
-    <button v-on:click="Save"> Save This Character To Datatabase </button> 
+      </select> <br>
+      <button v-on:click="Delete"> Delete This Character From Datatabase </button> 
+      <button v-on:click="Retrieve"> Retrieve This Character From Datatabase </button>
+      <RetrievedDisplay v-bind:char_sheet='this.retrievedChar'/>
+    </div>
+    <div v-if="this.newCharVal">
+      <characterInput  v-on:submit="display" id = "charInput"/>
+      <characterDisplay v-bind:char_sheet='this.char_sheet'/>
+      <button v-on:click="Save"> Save This Character To Datatabase </button> 
+    </div>
   </div>
 </template>
 
 <script>
 import characterDisplay from './components/characterDisplay.vue'
+import RetrievedDisplay from './components/RetrievedDisplay.vue'
 import characterInput from './components/characterInput.vue'
 import Header from './components/Header.vue'
 import gql from "graphql-tag"
@@ -28,38 +42,33 @@ export default {
         id
       }
     }`,
-      GetCharQ: { 
-        query: gql`query
-          GetChar($id:Int) {
-            id
-            name
-            race
-            str
-            dex
-            con
-            int
-            wis
-            cha
-          }`,
-          variables: {
-            id: this
-          }
-        }
-      
   },
   data() {
     return {
       char: '',
       character: '',
       char_sheet: {},
+      id: 0,
+      prevCharVal:false,
+      newCharVal:false,
+      retrievedChar: {}
     };
   },
   components: {
     characterInput,
     characterDisplay,
-    Header
+    Header,
+    RetrievedDisplay
   },
   methods: {
+    prevChar: function () {
+      console.log(this.prevCharVal)
+      this.prevCharVal = !this.prevCharVal
+    },
+    newChar: function () {
+      console.log(this.newCharVal)
+      this.newCharVal = !this.newCharVal
+    },
   // GetChar: async function() {
   //   console.log(this.character, typeof this.character)
   //   this.char_id = this.character.split('.')[0]
@@ -85,6 +94,43 @@ export default {
       }
     })
   },
+  Delete: async function() {
+    console.log(this.id)
+    await this.$apollo.mutate({
+      mutation: gql`mutation ($id:ID!) {
+        Delete(id:$id) 
+      }`,
+    variables: {
+      id: this.id
+    }
+    })
+  },
+  Retrieve: async function() {
+    console.log(this.id)
+    let result = await this.$apollo.query({
+        query: gql`query ($id:ID!) {
+          GetChar(id: $id) {
+            id
+            name
+            race
+            str
+            dex
+            con
+            int
+            wis
+            cha
+          }
+          }`,
+          variables: {
+            id: this.id
+          }
+        })
+      delete result.data.GetChar['__typename']
+      delete result.data.GetChar['id']
+      this.retrievedChar = result.data.GetChar
+      console.log(this.retrievedChar)
+  },
+
   display: function (char_name, char_race,char_str,char_dex,char_con,char_int,char_wis,char_cha) {
     this.char_name = char_name 
     this.char_race = char_race
