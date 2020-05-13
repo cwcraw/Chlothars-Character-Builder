@@ -1,5 +1,5 @@
 # Chlothars-Character-Builder
-A basic character creator for Pathfinder/D20.
+A basic character creator for Pathfinder/D20 for personal use.
 
 This was created during my time as a student at Code Chrysalis.
 
