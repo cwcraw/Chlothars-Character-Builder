@@ -1,6 +1,9 @@
 # Chlothars-Character-Builder
+A basic character creator for Pathfinder/D20.
 
-A basic character creator for Pathfinder/D20
+This was created during my time as a student at Code Chrysalis.
+
+
 
 ## Project setup
 
@@ -16,6 +19,14 @@ Start here to revisit your Characters
 6. Please find your characters on the local host
 
 ```
+### Future Plans
+* Add more Races
+* Add Classes
+* Add Inventory
+* Add the ability to update characters
+* EoU improvements
+* Refactor Code
+
 ### Compiles and minifies for production
 
 ```
@@ -24,7 +35,7 @@ yarn build
 
 ### Lints and fixes files
 
-```
+```     
 yarn lint
 ```
 
