@@ -3,10 +3,13 @@ import App from './App.vue'
 import ApolloClient  from 'apollo-boost'
 import VueApollo from 'vue-apollo'
 // import server from '../server.js'
+require("dotenv").config;
+
+
 Vue.use(VueApollo)
 
 const apolloClient = new ApolloClient({
-  uri: "http://localhost:4000/"
+  uri: process.env.DATABASE_URL || "http://localhost:4000/" // need to add an "or" statement telling it to try both
 })
 const apolloProvider = new VueApollo({
   defaultClient: apolloClient,

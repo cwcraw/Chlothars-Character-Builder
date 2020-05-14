@@ -101,7 +101,7 @@ export default {
       extraPoint:"",
       pointList: [-4,-2,-1,0,1,2,3,5,7,10,13,17],
       pointObj: {"-4":7,"-2":8,"-1":9,"0":10,"1":11,"2":12,"3":13,"5":14,"7":15,"10":16,"13":17,"17":18},
-      scoreObj: {"7":-4,"8":-2,"9":-1,"10":0,"11":1,"12":2,"13":3,"14":5,"15":7,"16":10,"17":14,"18":17},
+      scoreObj: {"7":-4,"8":-2,"9":-1,"10":0,"11":1,"12":2,"13":3,"14":5,"15":7,"16":10,"17":13,"18":17},
       settingList:["Low Fantasy","Standard Fantasy","High Fantasy", "Epic Fantasy"],
       settingObj:{"Low Fantasy":10,"Standard Fantasy":15,"High Fantasy":20, "Epic Fantasy":25},
       setting: 0,

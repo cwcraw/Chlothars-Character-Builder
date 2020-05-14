@@ -1,3 +1,4 @@
+## To Do List
 1. Refactor Code to make it simpler to follow
     1. Break Up App.vue ✔️
     1. Use CharacterDisplay.vue for New and Prev Characters ✔️
@@ -21,3 +22,6 @@
 6. Add Spells and Skills
     1. Spell Table
     1. Skill Table
+
+## Bug List
+1. Extra points added when going from max ability score, 18, to penultimate score, 17.
