@@ -7,6 +7,6 @@ module.exports = {
       database: process.env.DB_NAME || "characters",
       user: process.env.DB_USER || "cwcra",
       password: process.env.DB_PASSWORD || "postgres"
-    },
+    }
   }
 };

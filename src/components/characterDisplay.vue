@@ -8,27 +8,28 @@
         </option>
       </select>
       <div v-if="this.display==='JSON'" >
-        <h1>{{char_sheet}}</h1>
+        <h1>{{charSheet}}</h1>
       </div>
       <div v-else-if="this.display==='CSV'" >
-        <h1>Name, {{char_sheet.name}}, Race, {{char_sheet.race}},
-          Str, {{char_sheet.str}},
-          Dex, {{char_sheet.dex}},
-          Con, {{char_sheet.con}},
-          Int, {{char_sheet.int}},
-          Wis, {{char_sheet.wis}},
-          Cha, {{char_sheet.cha}},
+        <h1>Name, {{charSheet.name}}, 
+          Race, {{charSheet.race}},
+          Str, {{charSheet.str}},
+          Dex, {{charSheet.dex}},
+          Con, {{charSheet.con}},
+          Int, {{charSheet.int}},
+          Wis, {{charSheet.wis}},
+          Cha, {{charSheet.cha}}
           
           </h1>
       </div>
       <div v-if="this.display==='Browser'">
-        <h1> {{char_sheet.name}} the {{char_sheet.race}} </h1>
-        <h3>Str: {{char_sheet.str}}</h3> 
-        <h3>Dex: {{char_sheet.dex}}</h3> 
-        <h3>Con: {{char_sheet.con}}</h3> 
-        <h3>Int: {{char_sheet.int}}</h3> 
-        <h3>Wis: {{char_sheet.wis}}</h3> 
-        <h3>Cha: {{char_sheet.cha}}</h3> 
+        <h1> {{charSheet.name}} the {{charSheet.race}} </h1>
+        <h3>Str: {{charSheet.str}}</h3> 
+        <h3>Dex: {{charSheet.dex}}</h3> 
+        <h3>Con: {{charSheet.con}}</h3> 
+        <h3>Int: {{charSheet.int}}</h3> 
+        <h3>Wis: {{charSheet.wis}}</h3> 
+        <h3>Cha: {{charSheet.cha}}</h3> 
       </div>
     </div>
   </div>
@@ -40,11 +41,11 @@ export default {
   data: () => {
     return {
     displayList: ["Browser","JSON","CSV"],
-    display: ""
+    display: "Browser"
     }
   },
   props: {
-  char_sheet: Object,
+  charSheet: Object,
   },
 };
 </script>

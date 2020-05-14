@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <h1>Welcome to Chlothar's Character Creator</h1>
+  <div id = header>
+    Welcome to Chlothar's Character Creator
   </div>
 </template>
 
@@ -9,3 +9,9 @@ export default {
   name: "Header",
 };
 </script>
+
+<style scoped>
+#header {
+  font-size: larger;
+}
+</style>

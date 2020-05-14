@@ -21,19 +21,20 @@ const typeDefs = gql`
   
   type Query {
     GetChar(id:ID!): CharSheet,
-    CharSheets: [CharSheet]
+    CharSheetList: [CharSheet]
   }
 
   type Mutation {
     Delete(id:ID!): String,
+    CharUpdate(id:ID!,name:String,race:String,str:Int,dex:Int,con:Int,int:Int,wis:Int,cha:Int): CharSheet
     NewCharSheet(name:String!,race:String!,str:Int!,dex:Int!,con:Int!,int:Int!,wis:Int!,cha:Int!): CharSheet 
   }
 `;
 
 const resolvers = {
   Query: {
-    CharSheets: async () => {
-      let output = await dbOps.list()
+    CharSheetList: async () => {
+      let output = await dbOps.CharSheetList()
       return output
     },
     GetChar: async (_,request) => {
@@ -50,6 +51,8 @@ const resolvers = {
     Delete: async (_,request) => {
       await dbOps.Delete(request)
     },
+    CharUpdate: async (_,request) =>
+      await dbOps.CharUpdate(request)
   }
 
 };

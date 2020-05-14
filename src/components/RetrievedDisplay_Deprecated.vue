@@ -17,7 +17,7 @@
           Con, {{char_sheet.con}},
           Int, {{char_sheet.int}},
           Wis, {{char_sheet.wis}},
-          Cha, {{char_sheet.cha}},
+          Cha, {{char_sheet.cha}}
           
           </h1>
       </div>
