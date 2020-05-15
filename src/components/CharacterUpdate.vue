@@ -73,6 +73,7 @@ export default {
       this.charRace= this.charSheet.race
     },
     charUpdate: async function() {
+      console.log('In CharUpdate')
       await this.$apollo.mutate({
       mutation: gql`mutation ($id:ID!,$name: String!,$race:String!,$str:Int!,$dex:Int!,$con:Int!,$int:Int!,$wis:Int!,$cha:Int!) {
         CharUpdate(id:$id, name: $name, race:$race, str:$str, dex:$dex, con:$con, int:$int, wis:$wis, cha:$cha){
@@ -90,6 +91,7 @@ export default {
         cha: this.charCha
         } 
       })
+      console.log('In CharUpdate')
     },
   }
 };

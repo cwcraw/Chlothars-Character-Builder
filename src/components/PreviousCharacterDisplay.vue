@@ -76,7 +76,7 @@ export default {
         })
       delete result.data.GetChar['__typename']
       this.updatingChar = result.data.GetChar
-      console.log(this. updatingChar, 'UPdatingChar')
+      console.log( 'UPdatingChar',this. updatingChar)
       this.charUpdateFlag=true
       this.charDisplayFlag=false
     },
