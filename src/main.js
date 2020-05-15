@@ -15,6 +15,7 @@ const apolloProvider = new VueApollo({
   defaultClient: apolloClient,
 })
 Vue.config.productionTip = false
+console.log(process.env.DATABASE_URL)
 
 new Vue({
   apolloProvider,

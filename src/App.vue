@@ -1,11 +1,11 @@
 <template>
   <div id="app">
     <Header/>
-      <button v-on:click="prevChar"> Previous Characters </button> 
+    <div v-if="!this.newCharVal">
       <button v-on:click="newChar"> New Character </button> 
-    <div v-if="this.prevCharVal">
       <PreviousCharacterDisplay/>
     </div>
+      <button v-on:click="newChar"> Previous Characters </button> 
     <div v-if="this.newCharVal">
       <NewCharacterDisplay/>
     </div>
@@ -31,9 +31,9 @@ export default {
     };
   },
   methods: {
-    prevChar: function () {
-      this.prevCharVal = !this.prevCharVal
-    },
+    // prevChar: function () {
+    //   this.prevCharVal = !this.prevCharVal
+    // },
     newChar: function () {
       this.newCharVal = !this.newCharVal
     },

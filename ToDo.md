@@ -24,4 +24,4 @@
     1. Skill Table
 
 ## Bug List
-1. Extra points added when going from max ability score, 18, to penultimate score, 17.
+1. Extra points added when going from max ability score, 18, to penultimate score, 17.✔️
