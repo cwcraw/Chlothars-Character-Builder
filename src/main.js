@@ -3,7 +3,7 @@ import App from './App.vue'
 import ApolloClient  from 'apollo-boost'
 import VueApollo from 'vue-apollo'
 // import server from '../server.js'
-require("dotenv").config;
+require("dotenv").config()
 
 
 Vue.use(VueApollo)
