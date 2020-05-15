@@ -1,7 +1,7 @@
 module.exports = {
   lintOnSave: false,
-  disableHostCheck: true,
   devServer: {
+    disableHostCheck: true,
     proxy: "http://localhost:9000"
   }
 };
