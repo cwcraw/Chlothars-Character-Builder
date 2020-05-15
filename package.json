@@ -9,6 +9,7 @@
     "newMigration": "knex migrate:make migrate_1.js --migrations-directory ./model/migrations",
     "seed": "yarn knex seed:run --knexfile=./model/knexfile.js",
     "FEStart": "vue-cli-service serve",
+    "start": "vue-cli-service serve",
     "BEStart": "yarn nodemon ./server/server.js"
   },
   "dependencies": {
