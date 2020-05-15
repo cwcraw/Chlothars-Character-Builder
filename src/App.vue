@@ -5,8 +5,8 @@
       <button v-on:click="newChar"> New Character </button> 
       <PreviousCharacterDisplay/>
     </div>
-      <button v-on:click="newChar"> Previous Characters </button> 
     <div v-if="this.newCharVal">
+      <button v-on:click="newChar"> Previous Characters </button> 
       <NewCharacterDisplay/>
     </div>
   </div>
