@@ -16,6 +16,8 @@ const apolloProvider = new VueApollo({
 })
 Vue.config.productionTip = false
 console.log("URL",process.env.DATABASE_URL)
+console.log("URL",process.DATABASE_URL)
+// console.log("URL",DATABASE_URL)
 
 new Vue({
   apolloProvider,
