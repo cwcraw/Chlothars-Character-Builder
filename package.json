@@ -10,8 +10,8 @@
     "seed": "yarn knex seed:run --knexfile=./model/knexfile.js",
     "FEStart": "vue-cli-service serve",
     "start": "node server/server.js",
-    "BEStart": "yarn nodemon ./server/server.js",
-    "heroku-postbuild": "vue-cli-service serve"
+    "BEStart": "yarn nodemon ./server/server.js"
+    // "heroku-postbuild": "vue-cli-service serve"
   },
   "dependencies": {
     "apollo-boost": "^0.4.8",
