@@ -1,12 +1,10 @@
 //BE Server
-const { typeDefs, resolvers } = require("./schema.js")
+const { typeDefs, resolvers } = require("./schema.js");
 const { ApolloServer } = require("apollo-server");
-require("dotenv").config();
+require("dotenv").config(require("find-config")(".env"));
 
 const server = new ApolloServer({ typeDefs, resolvers });
-const port = process.env.PORT //|| 4000; // Works on local without it.
-console.log(process.env.URL)
+const port = process.env.PORT || 4000; // Works on local without it.
 server.listen(port).then(({ url }) => {
-  // process.env.DATABASE_URL = url // probably w
   console.log(`🚀 Server ready at ${url}`);
 });

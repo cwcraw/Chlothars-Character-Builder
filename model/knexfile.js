@@ -1,6 +1,6 @@
 // Update with your config settings.
 
-require("dotenv").config();
+require("dotenv").config(require("find-config")(".env"))
 const config = require("../config");
 
 

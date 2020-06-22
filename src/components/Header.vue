@@ -1,5 +1,5 @@
 <template>
-  <div id = header>
+  <div id="header">
     Welcome to Chlothar's Character Creator
   </div>
 </template>
