@@ -1,44 +1,41 @@
 <template>
   <div id="app">
-    <Header/>
+    <Header />
     <div v-if="!this.newCharVal">
-      <button v-on:click="newChar"> New Character </button> 
-      <PreviousCharacterDisplay/>
+      <button v-on:click="newChar">New Character</button>
+      <PreviousCharacterDisplay />
     </div>
     <div v-if="this.newCharVal">
-      <button v-on:click="newChar"> Previous Characters </button> 
-      <NewCharacterDisplay/>
+      <button v-on:click="newChar">Previous Characters</button>
+      <NewCharacterDisplay />
     </div>
   </div>
 </template>
 
 <script>
-import PreviousCharacterDisplay from './components/PreviousCharacterDisplay.vue'
-import NewCharacterDisplay from './components/NewCharacterDisplay.vue'
-import Header from './components/Header.vue'
+import PreviousCharacterDisplay from "./components/PreviousCharacterDisplay.vue";
+import NewCharacterDisplay from "./components/NewCharacterDisplay.vue";
+import Header from "./components/Header.vue";
 
 export default {
-  name: 'App',
-    components: {
-      Header,
-      PreviousCharacterDisplay,
-      NewCharacterDisplay
-    },
+  name: "App",
+  components: {
+    Header,
+    PreviousCharacterDisplay,
+    NewCharacterDisplay,
+  },
   data() {
     return {
-      prevCharVal:false,
-      newCharVal:false,
+      prevCharVal: false,
+      newCharVal: false,
     };
   },
   methods: {
-    // prevChar: function () {
-    //   this.prevCharVal = !this.prevCharVal
-    // },
-    newChar: function () {
-      this.newCharVal = !this.newCharVal
+    newChar: function() {
+      this.newCharVal = !this.newCharVal;
     },
-  }
-}
+  },
+};
 </script>
 
 <style>
@@ -49,6 +46,6 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
-  background: antiquewhite
+  background: antiquewhite;
 }
 </style>

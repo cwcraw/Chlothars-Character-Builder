@@ -5,8 +5,12 @@
     1. Standardize Variable names✔️
 1. Add Character Update🔴
     1. Current Status: Able to update from FE, but kinda buggy
-    1. Consider using Vuex to handle character state.
-1. Refactor CSS◀️
+    1. Consider using Vuex to handle character state.◀️
+1. Add user authentication
+1. Deply via Docker and AWS
+1. Make HTTPS
+1. Character abilities hard limited by available points.
+1. Refactor CSS
 1. Prettify code
 2. Refactor Character Retrieval
     1. Pop up warning when you delete a character
