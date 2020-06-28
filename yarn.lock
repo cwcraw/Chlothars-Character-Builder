@@ -1149,10 +1149,6 @@
     "@types/node" "*"
     form-data "^3.0.0"
 
-"@types/node@*", "@types/node@>=6":
-  version "14.0.13"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-14.0.13.tgz#ee1128e881b874c371374c1f72201893616417c9"
-  integrity sha512-rouEWBImiRaSJsVA+ITTFM6ZxibuAlTuNOCyxVbwreu6k6+ujs7DfnU9o+PShFhET78pMBl3eH+AGSI5eOTkPA==
 "@types/node@*":
   version "14.0.13"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-14.0.13.tgz#ee1128e881b874c371374c1f72201893616417c9"
@@ -1162,7 +1158,6 @@
   version "13.13.5"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-13.13.5.tgz#96ec3b0afafd64a4ccea9107b75bf8489f0e5765"
   integrity sha512-3ySmiBYJPqgjiHA7oEaIo2Rzz0HrOZ7yrNO5HWyaE5q0lQ3BppDZ3N53Miz8bw2I7gh1/zir2MGVZBvpb1zq9g==
-
 
 "@types/node@^10.1.0":
   version "10.17.26"
@@ -1914,8 +1909,6 @@ apollo-server-caching@^0.5.1:
     lru-cache "^5.0.0"
 
 apollo-server-core@^2.15.0:
-apollo-server-core@^2.14.2, apollo-server-core@^2.15.0:
-
   version "2.15.0"
   resolved "https://registry.yarnpkg.com/apollo-server-core/-/apollo-server-core-2.15.0.tgz#a9c19028b76e7ca90a759b4421556ba7625df1d9"
   integrity sha512-PwNm/G5IXReev7E0ZaRAekQ7pN9BTuXH8c2QVgfMGMno3XiN5Dj+1DXYQthpwNJch0y5zhhLcb/JbClijgSEsA==
@@ -1957,7 +1950,6 @@ apollo-server-errors@^2.4.1:
   integrity sha512-7oEd6pUxqyWYUbQ9TA8tM0NU/3aGtXSEibo6+txUkuHe7QaxfZ2wHRp+pfT1LC1K3RXYjKj61/C2xEO19s3Kdg==
 
 apollo-server-express@^2.15.0:
-
   version "2.15.0"
   resolved "https://registry.yarnpkg.com/apollo-server-express/-/apollo-server-express-2.15.0.tgz#c0639fc92d5d5784f437735610355f4522e28625"
   integrity sha512-ECptVIrOVW2cmMWvqtpkZfyZrQL8yTSgbVvP4M8qcPV/3XxDJa6444zy7vxqN7lyYl8IJAsg/IwC0vodoXe//A==
@@ -1995,7 +1987,7 @@ apollo-server-types@^0.5.0:
     apollo-server-caching "^0.5.1"
     apollo-server-env "^2.4.4"
 
-apollo-server@^2.13.0:
+apollo-server@^2.14.2:
   version "2.15.0"
   resolved "https://registry.yarnpkg.com/apollo-server/-/apollo-server-2.15.0.tgz#904d36e4e6add76d5618de8a594adfd2c38d34ce"
   integrity sha512-Qx9VT3kOgJ6WVZlbpUl29I9pyfwFTY4SbZm9npuJd0v+8kVn2YijHB8DEDJ2B/6XP8WCKtq2W0W2RK5Kb1laHQ==
@@ -5550,13 +5542,12 @@ is-plain-object@^2.0.3, is-plain-object@^2.0.4:
   dependencies:
     isobject "^3.0.1"
 
-
 is-regex@^1.0.4:
   version "1.0.5"
   resolved "https://registry.yarnpkg.com/is-regex/-/is-regex-1.0.5.tgz#39d589a358bf18967f726967120b8fc1aed74eae"
   integrity sha512-vlKW17SNq44owv5AQR3Cq0bQPEb8+kF3UKZ2fiZNOWtztYE5i0CzCZxFDwO58qAOWtxdBRVO/V5Qin1wjCqFYQ==
   dependencies:
-    has-symbols "^1.0.1"
+    has "^1.0.3"
 
 is-regex@^1.1.0:
   version "1.1.0"
@@ -9051,7 +9042,6 @@ ts-pnp@^1.1.6:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/ts-pnp/-/ts-pnp-1.2.0.tgz#a500ad084b0798f1c3071af391e65912c86bca92"
   integrity sha512-csd+vJOb/gkzvcCHgTGSChYpy5f1/XKNsmvBGO4JXS+z1v2HobugDz4s1IeFXM3wZB44uczs+eazB5Q/ccdhQw==
-
 
 tslib@^1.10.0, tslib@^1.9.3:
   version "1.13.0"
