@@ -1,1 +1,2 @@
-web: node index.js
+api: yarn start 
+web: serve -s dist
