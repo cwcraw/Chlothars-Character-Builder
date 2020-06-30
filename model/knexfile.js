@@ -6,10 +6,8 @@ const config = require("../config");
 
 module.exports = {
   client: "pg",
-  connection:  config.db.connection,
-  // connection:  process.env.DATABASE_URL ||     
-  // `postgres://${process.env.USER}:${process.env.PASSWORD}@127.0.0.1:5432/characters`,
-  ,
+  connection:  config.db.connection ||     
+  `postgres://${process.env.USER}:${process.env.PASSWORD}@127.0.0.1:5432/characters`,
   // pool: {
     pool: {
     min: 2,
