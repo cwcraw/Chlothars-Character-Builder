@@ -1,1 +1,1 @@
-web: vue-cli-service serve
+web: yarn vue-cli-service serve
